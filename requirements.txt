@@ -1,0 +1,18 @@
+# utilities
+numpy
+pandas
+
+# face recognation
+scikit-learn
+dlib-bin # use to find the face in the image
+git+https://github.com/ageitgey/face_recognition_models # use for detect the landmark of the model (eyes,nose,etc...)
+setuptools<70.0.0
+
+supabase
+dcrypt
+
+segno # to create QR through link
+pillow # to deal with pillow
+
+streamlit # ui
+
