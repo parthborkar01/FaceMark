@@ -9,7 +9,7 @@ git+https://github.com/ageitgey/face_recognition_models # use for detect the lan
 setuptools<70.0.0
 
 supabase
-dcrypt
+bcrypt
 
 segno # to create QR through link
 pillow # to deal with pillow
