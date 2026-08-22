@@ -6,11 +6,11 @@ def base_backGround_dashBoard():
                 position: relative !important;
                 isolation: isolate !important;
                 overflow: hidden !important;
-                background-color: #08152f !important;
+                background-color: #0b1220 !important;
                 background-image:
                     linear-gradient(rgba(125, 211, 252, 0.08) 1px, transparent 1px),
                     linear-gradient(90deg, rgba(125, 211, 252, 0.08) 1px, transparent 1px),
-                    linear-gradient(135deg, #050b21 0%, #102a56 48%, #075985 100%) !important;
+                    linear-gradient(135deg, #0b1220 0%, #182a49 48%, #164e63 100%) !important;
                 background-size: 32px 32px, 32px 32px, 200% 200% !important;
                 background-position: 0 0, 0 0, 0% 50% !important;
                 background-attachment: fixed !important;
@@ -156,7 +156,7 @@ def home_button():
                 font-size: 2.75rem !important;
                 font-weight: 500 !important;
 
-                padding: 0.5rem 1.5rem !important;
+                padding: 0.5rem 1.25rem !important;
 
                 transition: transform 0.25s ease-in-out,
                             background-color 0.25s ease-in-out !important;
@@ -205,7 +205,7 @@ def card_style():
         .st-key-teacher_card div.stButton > button {
             border-radius: 0.9rem !important;
             font-size: 1.05rem !important;
-            padding: 0.65rem 1rem !important;
+            padding: 0.5rem 1rem !important;
         }
 
     </style>

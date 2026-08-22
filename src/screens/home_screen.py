@@ -70,6 +70,7 @@ def home_screen():
                 teacher = st.button("Teacher  ↑", type="primary")
                 if teacher:
                     st.session_state["login_type"] = "teacher"
+                    st.session_state["teacher_login_type"] = "login"
                     st.rerun()
 
     footer()
