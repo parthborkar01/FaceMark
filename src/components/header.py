@@ -124,3 +124,166 @@ def header_dashBoard():
     if go_home:
         st.session_state["login_type"] = None
         st.rerun()
+
+
+def teacher_header_dashBoard():
+    st.markdown("""
+        <style>
+            .inner_div{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+                gap:1rem;
+                margin-top:1.5rem !important;
+            }
+            /* Google Fonts */
+                        @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+            
+                        /* Hide Streamlit default UI */
+                        #MainMenu {
+                            visibility: hidden !important;
+                        }
+            
+                        header {
+                            visibility: hidden !important;
+                        }
+            
+                        footer {
+                            visibility: hidden !important;
+                        }
+            
+                        /* Main container */
+                        .block-container {
+                            padding-top: 0.5rem !important;
+                        }
+            
+                        /* H2 heading */
+                        h2 {
+                            font-family: 'Elsie', serif !important;
+                            font-size: 2rem !important;
+                            line-height: 1.1 !important;
+                            color:#595658 !important;
+                            text-align: center !important;
+                        }
+                        .st-key-dashboard_home button {
+                            width: auto !important;
+                            min-width: 120px !important;
+                            background-color: #ec4899 !important;
+                            color: white !important;
+                            border: none !important;
+                            border-radius: 0.8rem !important;
+                            padding: 0.35rem 0.8rem !important;
+                            font-family: 'Libre Baskerville', serif !important;
+                            font-size: 0.82rem !important;
+                        }
+
+                        .st-key-dashboard_home {
+                            display: flex !important;
+                            justify-content: flex-end !important;
+                        }
+
+                        .st-key-dashboard_home button:hover {
+                            background-color: #db2777 !important;
+                        }
+        </style>
+
+    """,unsafe_allow_html=True)
+
+    header_column, button_column = st.columns(2, vertical_alignment="center")
+    with header_column:
+        st.markdown("""
+            <div class="inner_div">
+                <img src="https://i.ibb.co/YTYGn5qV/logo.png" alt="FaceMark logo" width=75/>
+                <h2>FaceMark</h2>
+            </div>
+        """, unsafe_allow_html=True)
+    with button_column:
+        st.space()
+        logout = st.button("Logout", key="dashboard_home")
+
+    if logout:
+        st.session_state["is_loged_in"] = False
+        del st.session_state.teacher_data
+        st.rerun()
+
+def student_header_dashBoard():
+    st.markdown("""
+        <style>
+            .inner_div{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+                gap:1rem;
+                margin-top:1.5rem !important;
+            }
+            /* Google Fonts */
+                        @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+            
+                        /* Hide Streamlit default UI */
+                        #MainMenu {
+                            visibility: hidden !important;
+                        }
+            
+                        header {
+                            visibility: hidden !important;
+                        }
+            
+                        footer {
+                            visibility: hidden !important;
+                        }
+            
+                        /* Main container */
+                        .block-container {
+                            padding-top: 0.5rem !important;
+                        }
+            
+                        /* H2 heading */
+                        h2 {
+                            font-family: 'Elsie', serif !important;
+                            font-size: 2rem !important;
+                            line-height: 1.1 !important;
+                            color:#595658 !important;
+                            text-align: center !important;
+                        }
+                        .st-key-dashboard_home button {
+                            width: auto !important;
+                            min-width: 120px !important;
+                            background-color: #ec4899 !important;
+                            color: white !important;
+                            border: none !important;
+                            border-radius: 0.8rem !important;
+                            padding: 0.35rem 0.8rem !important;
+                            font-family: 'Libre Baskerville', serif !important;
+                            font-size: 0.82rem !important;
+                        }
+
+                        .st-key-dashboard_home {
+                            display: flex !important;
+                            justify-content: flex-end !important;
+                        }
+
+                        .st-key-dashboard_home button:hover {
+                            background-color: #db2777 !important;
+                        }
+        </style>
+
+    """,unsafe_allow_html=True)
+
+    header_column, button_column = st.columns(2, vertical_alignment="center")
+    with header_column:
+        st.markdown("""
+            <div class="inner_div">
+                <img src="https://i.ibb.co/YTYGn5qV/logo.png" alt="FaceMark logo" width=75/>
+                <h2>FaceMark</h2>
+            </div>
+        """, unsafe_allow_html=True)
+    with button_column:
+        
+        logout = st.button("Logout", key="dashboard_home")
+
+    if logout:
+        st.session_state["is_loged_in"] = False
+        del st.session_state.student_data
+        st.rerun()

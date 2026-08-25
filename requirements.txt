@@ -1,3 +1,5 @@
+streamlit # ui
+
 # utilities
 numpy
 pandas
@@ -14,5 +16,5 @@ bcrypt
 segno # to create QR through link
 pillow # to deal with pillow
 
-streamlit # ui
-
+librosa
+resemblyzer
