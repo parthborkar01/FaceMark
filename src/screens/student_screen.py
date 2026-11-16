@@ -95,7 +95,7 @@ def student_dashboard():
 
         def unenroll_button():
             # button style 
-            if st.button("Unenroll from this course",width='stretch'):
+            if st.button("Unenroll from this course", key=f"unenroll_{student_id}_{sid}", width='stretch'):
                 unenroll_student_to_subject(student_id,sid)
                 st.toast(f'Unenrolled from {sid} successfully')
                 st.rerun()
